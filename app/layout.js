@@ -1,17 +1,21 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Nina Aßmann | Portfolio",
+  title: "Nina Aßmann | Webdevelopment & Design",
   description: "Webdevelopment & Design",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="de">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
